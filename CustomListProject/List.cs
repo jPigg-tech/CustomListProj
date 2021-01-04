@@ -6,8 +6,29 @@ using System.Threading.Tasks;
 
 namespace CustomListProject
 {
-    public class List
+    public class List<T>
     {
+        // Variables 
 
+        private int count;
+        public int Count
+        {
+            get
+            {
+                return count;
+            }
+        }
+        
+        // Constructor
+
+        // Methods 
+
+        //public void Add(ref T firstItem)
+        //{
+        //    for (int i = 0; i <  ; i++)
+        //    {
+
+        //    }
+        //}
     }
 }

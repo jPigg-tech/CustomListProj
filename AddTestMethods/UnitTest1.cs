@@ -11,7 +11,7 @@ namespace AddTestMethods
         public void AddOneItemToList_GetCount()
         {
             // Arrange
-            
+            List list = new List();
 
             // Act
 
