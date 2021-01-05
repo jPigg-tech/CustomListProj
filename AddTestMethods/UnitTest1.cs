@@ -48,16 +48,14 @@ namespace AddTestMethods
 
         //create a list check capacity, should be 4
         [TestMethod]
-        public void CreateAListList_GetCapacity()
+        public void CreateAList_GetCapacity()
         {
             // Arrange
             CustomList<int> testList = new CustomList<int>();
             int expected = 4;
-            int actual;
-            
+            int actual;            
 
-            // Act
-            
+            // Act           
             actual = testList.capacity;
 
             // Assert
@@ -66,7 +64,7 @@ namespace AddTestMethods
 
         //create a list add 5 items, check capacity, should be 8
         [TestMethod]
-        public void CreateAListList_Add5Items_GetCapacity()
+        public void CreateAList_Add5Items_GetCapacity()
         {
             // Arrange
             CustomList<int> testList = new CustomList<int>();
@@ -77,7 +75,6 @@ namespace AddTestMethods
             int value3 = 10;
             int value4 = 15;
             int value5 = 23;
-
 
             // Act
             testList.Add(value1);
@@ -91,7 +88,22 @@ namespace AddTestMethods
             Assert.AreEqual(expected, actual);
         }
         //add one value, check the first index of the list.  should be the value added
+        [TestMethod]
+        public void CreateAList_AddOneItem_CheckIndex()
+        {
+            // Arrange
+            CustomList<int> testList = new CustomList<int>();
+            int expected = 28;
+            int actual;
+            int value1 = 28;           
 
+            // Act
+            testList.Add(value1);
+            actual = testList[0];
+
+            // Assert
+            Assert.AreEqual(expected, actual);
+        }
     }
     
 }
