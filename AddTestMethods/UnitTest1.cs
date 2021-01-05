@@ -25,7 +25,6 @@ namespace AddTestMethods
         }
 
         //add multiple values, count increases
-
         [TestMethod]
         public void AddMultipleVariablesToList_GetCount()
         {
@@ -47,6 +46,23 @@ namespace AddTestMethods
             Assert.AreEqual(expected, actual);
         }
         //create a list check capacity, should be 4
+        [TestMethod]
+        public void CreateAListList_GetCapacity()
+        {
+            // Arrange
+            CustomList<int> testList = new CustomList<int>();
+            int expected = 4;
+            int actual;
+            
+
+            // Act
+            
+            actual = testList.capacity;
+
+            // Assert
+            Assert.AreEqual(expected, actual);
+        }
+
         //create a list add 5 items, check capacity, should be 8
         //add one value, check the first index of the list.  should be the value added
 
