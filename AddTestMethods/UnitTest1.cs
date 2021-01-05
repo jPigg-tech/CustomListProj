@@ -11,11 +11,17 @@ namespace AddTestMethods
         public void AddOneItemToList_GetCount()
         {
             // Arrange
-            List list = new List();
+            CustomList<int> testList = new CustomList<int>();
+            int expected = 1;
+            int actual;
+            int value1 = 5;
 
             // Act
+            testList.Add(value1);
+            actual = testList.Count;
 
             // Assert
+            Assert.AreEqual(expected, actual);
         }
 
         //[TestMethod]
