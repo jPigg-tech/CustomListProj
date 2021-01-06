@@ -10,7 +10,7 @@ namespace CustomListProject
     {
         static void Main(string[] args)
         {
-            
+
         }
     }
 }
