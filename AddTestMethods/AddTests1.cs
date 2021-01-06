@@ -56,7 +56,7 @@ namespace AddTestMethods
             int actual;            
 
             // Act           
-            actual = testList.capacity;
+            actual = testList.Capacity;
 
             // Assert
             Assert.AreEqual(expected, actual);
@@ -82,7 +82,7 @@ namespace AddTestMethods
             testList.Add(value3);
             testList.Add(value4);
             testList.Add(value5);
-            actual = testList.capacity;
+            actual = testList.Capacity;
 
             // Assert
             Assert.AreEqual(expected, actual);
@@ -116,6 +116,10 @@ namespace AddTestMethods
             int expected4 = 15;
             int expected5 = 23;
             int actual;
+            int actual2;
+            int actual3;
+            int actual4;
+            int actual5;
             int value1 = 5;
             int value2 = 7;
             int value3 = 10;
