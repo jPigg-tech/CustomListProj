@@ -105,6 +105,30 @@ namespace AddTestMethods
             Assert.AreEqual(expected, actual);
         }
 
+        // Add multiple values, check that the indexs match the values that were input in order
+        [TestMethod]
+        public void CreateAList_AddMultipleItems_CheckIndex()
+        {
+            // Arrange
+            CustomList<int> testList = new CustomList<int>();
+            int expected = 28;
+            int expected2 = 10;
+            int actual;
+            int actual2;
+            int value1 = 28;
+            int value2 = 10;
+
+            // Act
+            testList.Add(value1);
+            testList.Add(value2);
+            actual = testList[0];
+            actual2 = testList[1];
+
+            // Assert
+            Assert.AreEqual(expected, actual);
+            Assert.AreEqual(expected2, actual2);
+        }
+
         // Add 5 values, check the index of the list. make sure the idex matches the value 
         public void Add5ItemsToAList_CheckIfIndexValueAndActualValuesMatch()
         {
