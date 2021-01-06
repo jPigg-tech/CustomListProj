@@ -7,7 +7,7 @@ namespace RemoveTestMethods
     [TestClass]
     public class RemoveTests1
     {
-        // Remove one value get count
+        // Remove one item get count
         [TestMethod]        
         public void CreateAListOfItems_RemoveOneItem_GetCount()
         {
@@ -30,7 +30,7 @@ namespace RemoveTestMethods
             Assert.AreEqual(expected, actual);
         }
 
-        // Remove multiple values, count decreases
+        // Remove multiple items, count decreases
         [TestMethod]
         public void CreateAListOfItems_RemoveMultipleItems_GetCount()
         {
@@ -84,7 +84,9 @@ namespace RemoveTestMethods
             // Arrange
             CustomList<int> testList = new CustomList<int>();
             int expected = 10;
+            int expected2 = 5;
             int actual;
+            int actual2;
             int value1 = 5;
             int value2 = 10;
             int value3 = 20;
@@ -97,10 +99,11 @@ namespace RemoveTestMethods
             testList.Add(value4);
             testList.Remove(5);
             actual = testList[0];
+            actual2 = testList[2];
 
             // Assert
             Assert.AreEqual(expected, actual);
+            Assert.AreEqual(expected2, actual2);
         }
-        // Remove one value, check if index updated
     }
 }
