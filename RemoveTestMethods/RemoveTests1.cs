@@ -53,10 +53,10 @@ namespace RemoveTestMethods
             // Assert
             Assert.AreEqual(expected, actual);
         }
-        // test to make sure the index updates
 
+        // test to make sure the index updates
         [TestMethod]
-        public void CreateAListOfItems_RemoveOneItems_CheckIfIndexUpdates()
+        public void CreateAListOfItems_RemoveOneItem_CheckIfIndexUpdates()
         {
             // Arrange
             CustomList<int> testList = new CustomList<int>();
@@ -76,7 +76,31 @@ namespace RemoveTestMethods
             // Assert
             Assert.AreEqual(expected, actual);
         }
+
         // if you have multiple of the same values make sure you remove the right value 
+        [TestMethod]
+        public void CreateAListOfItems_RemoveOneItemThatIsIdenticalToAnotherItem_CheckIfRemovesCorrectItem()
+        {
+            // Arrange
+            CustomList<int> testList = new CustomList<int>();
+            int expected = 10;
+            int actual;
+            int value1 = 5;
+            int value2 = 10;
+            int value3 = 20;
+            int value4 = 5;
+
+            // Act
+            testList.Add(value1);
+            testList.Add(value2);
+            testList.Add(value3);
+            testList.Add(value4);
+            testList.Remove(5);
+            actual = testList[0];
+
+            // Assert
+            Assert.AreEqual(expected, actual);
+        }
         // Remove one value, check if index updated
     }
 }
