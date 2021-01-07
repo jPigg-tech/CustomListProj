@@ -38,8 +38,12 @@ namespace CustomListProject
                 }                
             }
         }
-        public int index;
         private T[] _items;
+        public T this[int i]
+        {
+            get { return _items[i]; }
+            set { _items[i] = value; }
+        }
 
         // Constructor
         public CustomList()
@@ -47,6 +51,7 @@ namespace CustomListProject
             count = 0;
             capacity = 4;
             _items = new T[capacity];
+            
         }
 
         // Methods 
