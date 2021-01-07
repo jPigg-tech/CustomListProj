@@ -43,6 +43,7 @@ namespace CustomListProject
         {
             get { return _items[i]; }
             set { _items[i] = value; }
+            // If statement to ensure out-of-bounds index doesnt happen
         }
 
         // Constructor
@@ -50,8 +51,7 @@ namespace CustomListProject
         {
             count = 0;
             capacity = 4;
-            _items = new T[capacity];
-            
+            _items = new T[capacity];           
         }
 
         // Methods 
@@ -98,6 +98,10 @@ namespace CustomListProject
                 }
             }
             count--;            
+        }
+        public override string ToString()
+        {
+            
         }
     }
 }
