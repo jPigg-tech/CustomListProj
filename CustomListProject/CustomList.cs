@@ -35,7 +35,7 @@ namespace CustomListProject
                 else
                 {
                     ResizeArray(Capacity);
-                }                
+                }
             }
         }
         private T[] _items;
@@ -51,7 +51,7 @@ namespace CustomListProject
         {
             count = 0;
             capacity = 4;
-            _items = new T[capacity];           
+            _items = new T[capacity];
         }
 
         // Methods 
@@ -97,11 +97,22 @@ namespace CustomListProject
                     _items[i] = default;
                 }
             }
-            count--;            
+            count--;
         }
         public override string ToString()
         {
-            
+            string printMembers = " ";
+
+            if (count > 0)
+            {
+                for (int i = 0; i < count; i++)
+                {
+                    printMembers += _items[i].ToString();
+                }
+            }
+            return printMembers;
         }
+
+        
     }
 }
