@@ -29,8 +29,8 @@ namespace CustomListProject
             {
                 if (Capacity < count)
                 {
-                    // ResizeArray(count);
-                    throw new Exception("Capacity cannot be lower than count");
+                    ResizeArray(count);
+                    // throw new Exception("Capacity cannot be lower than count");
                 }
                 else
                 {
@@ -75,9 +75,24 @@ namespace CustomListProject
             return newArray;
         }
 
-        public void Remove(T item)
+        public void Remove(T value)
         {
-
+            // make sure correct value is being removed 
+            // make sure the index updates after the item is removed 
+            // make sure the count updates when the item is removed 
+            for (int i = 0; i < count; i++)
+            {
+                if (_items[i].Equals(value) && _items[i] != count - 1)
+                {
+                    _items[i] = _items[i + 1];
+                    // _items[i] = null;
+                }
+                else
+                {
+                    _items[i] = default;
+                }
+            }
+            count--;            
         }
     }
 }
