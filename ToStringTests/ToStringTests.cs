@@ -32,7 +32,7 @@ namespace ToStringTests
             CustomList<int> testList = new CustomList<int>();
             string expected = "2020, 2021";
             string actual;
-            int value1 = 2020;
+            int value1 = 2020;//[2020, 2021] "2020, 2021"
             int value2 = 2021;
 
             // Act

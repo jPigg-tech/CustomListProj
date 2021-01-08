@@ -41,8 +41,22 @@ namespace CustomListProject
         private T[] _items;
         public T this[int i]
         {
-            get { return _items[i]; }
-            set { _items[i] = value; }
+            get
+            {
+                if (i >= 0 && i < count)
+                {
+                    return _items[i];
+                }
+                throw new ArgumentOutOfRangeException();
+            }
+            set 
+            {
+                if (i >= 0 && i < count)
+                {
+                    _items[i] = value;
+                }
+                throw new ArgumentOutOfRangeException();
+            }
             // If statement to ensure out-of-bounds index doesnt happen
         }
 
@@ -55,6 +69,7 @@ namespace CustomListProject
         }
 
         // Methods 
+        
         public void Add(T firstItem)
         {
             if (count == capacity)
@@ -87,7 +102,7 @@ namespace CustomListProject
             // make sure the count updates when the item is removed 
             for (int i = 0; i < count; i++)
             {
-                if (_items[i].Equals(value) && _items[i] != count - 1)
+                if (_items[i].Equals(value) && i != count - 1)
                 {
                     _items[i] = _items[i + 1];
                     // _items[i] = null;
@@ -101,7 +116,7 @@ namespace CustomListProject
         }
         public override string ToString()
         {
-            string printMembers = " ";
+            string printMembers = "";
 
             if (count > 0)
             {
@@ -112,7 +127,6 @@ namespace CustomListProject
             }
             return printMembers;
         }
-
-        
+       
     }
 }
