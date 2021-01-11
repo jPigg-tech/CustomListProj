@@ -12,18 +12,25 @@ namespace Overloading_OperatorTests
         public void CreateTwoListsOfStrings_AddTheListsTogether_PreserveOriginalLists()
         {
             // Arrange
-            CustomList<string> list1 = new CustomList<string> { "1, 2, " };
-            CustomList<string> list2 = new CustomList<string> { "3, 4" };
+            CustomList<string> list1 = new CustomList<string>();
+            CustomList<string> list2 = new CustomList<string>();
 
-            string expected = "1, 2, 3, 4";
-            string actual;
+            CustomList<string> expected = new CustomList<string>();
+            expected.Add("1");
+            expected.Add("2");
+            expected.Add("3");
+            expected.Add("4");
+
+            CustomList<string> actual = new CustomList<string>();
 
             // Act
+            list1.Add("1");
+            list1.Add("2");
 
-            foreach (string value in list1 + list2)
-            {
-                actual = (value + ", ");
-            }
+            list2.Add("3");
+            list2.Add("4");
+
+            actual = list1 + list2;           
                              
             // Assert
             Assert.AreEqual(expected, actual);
