@@ -90,26 +90,7 @@ namespace CustomListProject
             }
             return newArray;
         }
-
-        public void Remove(T value)
-        {
-            // make sure correct value is being removed 
-            // make sure the index updates after the item is removed 
-            // make sure the count updates when the item is removed 
-            for (int i = 0; i < count; i++)
-            {
-                if (_items[i].Equals(value) && i != count - 1)
-                {
-                    _items[i] = _items[i + 1];
-                    // _items[i] = null;
-                }
-                else
-                {
-                    _items[i] = default;
-                }
-            }
-            count--;
-        }
+        
         public override string ToString()
         {
             string printMembers = "";
@@ -124,7 +105,7 @@ namespace CustomListProject
             return printMembers;
         }       
 
-        public static  CustomList<T> operator+ (CustomList<T> list1, CustomList<T> list2)
+        public static  CustomList<T> operator +(CustomList<T> list1, CustomList<T> list2)
         {
             CustomList<T> newList = new CustomList<T>();
             foreach (T value in list1)
@@ -136,6 +117,26 @@ namespace CustomListProject
                 newList.Add(value);
             }
             return newList;
+        }
+        
+        public void Remove(T value)
+        {
+            
+            // make sure correct value is being removed 
+            // make sure the index updates after the item is removed 
+            // make sure the count updates when the item is removed 
+            for (int i = 0; i < count; i++)
+            {
+                if (_items[i].Equals(value) && i != count - 1)
+                {
+                    _items[i] = _items[i + 1];
+                }
+                else
+                {
+                    _items[i] = default;
+                }
+                count--;
+            }
         }
     }
 }
