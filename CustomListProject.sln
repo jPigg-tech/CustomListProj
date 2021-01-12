@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToStringTests", "ToStringTe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Overloading+OperatorTests", "Overloading+OperatorTests\Overloading+OperatorTests.csproj", "{88256A3F-FDE6-4DF7-BD1F-B3BD968D3A4A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "-OperatorTests", "-OperatorTests\-OperatorTests.csproj", "{2D829E6B-C2EB-4361-8D97-CE67A5AC479B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{88256A3F-FDE6-4DF7-BD1F-B3BD968D3A4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{88256A3F-FDE6-4DF7-BD1F-B3BD968D3A4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{88256A3F-FDE6-4DF7-BD1F-B3BD968D3A4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D829E6B-C2EB-4361-8D97-CE67A5AC479B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D829E6B-C2EB-4361-8D97-CE67A5AC479B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D829E6B-C2EB-4361-8D97-CE67A5AC479B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D829E6B-C2EB-4361-8D97-CE67A5AC479B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
