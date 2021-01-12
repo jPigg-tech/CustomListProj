@@ -26,18 +26,6 @@ namespace CustomListProject
             {
                 return capacity;
             }
-            set
-            {
-                if (Capacity < count)
-                {
-                    ResizeArray(count);
-                    // throw new Exception("Capacity cannot be lower than count");
-                }
-                else
-                {
-                    ResizeArray(Capacity);
-                }
-            }
         }
         private T[] _items;
         public T this[int i]
@@ -77,7 +65,6 @@ namespace CustomListProject
                 yield return _items[i];
             }
         }
-
 
         public void Add(T firstItem)
         {
