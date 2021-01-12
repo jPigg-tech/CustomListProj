@@ -49,7 +49,7 @@ namespace ToStringTests
         public void AddMultipleCharsToAList_ReturnThemAsAString()
         {
             // Arrange
-            CustomList<int> testList = new CustomList<int>();
+            CustomList<char> testList = new CustomList<char>();
             string expected = "Jeff";
             string actual;
             char value1 = 'J';
