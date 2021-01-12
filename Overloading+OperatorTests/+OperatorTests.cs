@@ -62,6 +62,32 @@ namespace Overloading_OperatorTests
             // Assert
             Assert.AreEqual(expected, actual);
         }
+        public void CreateTwoListsOfChars_AddTheListsTogether_PreserveOriginalLists()
+        {
+            // Arrange
+            CustomList<char> list1 = new CustomList<char>();
+            CustomList<char> list2 = new CustomList<char>();
+
+            CustomList<char> expected = new CustomList<char>();
+            expected.Add('J');
+            expected.Add('e');
+            expected.Add('f');
+            expected.Add('f');
+
+            CustomList<char> actual = new CustomList<char>();
+
+            // Act
+            list1.Add('J');
+            list1.Add('e');
+
+            list2.Add('f');
+            list2.Add('f');
+
+            actual = list1 + list2;
+
+            // Assert
+            Assert.AreEqual(expected, actual);
+        }
 
 
     }
