@@ -49,7 +49,7 @@ namespace CustomListProject
                 }
                 throw new ArgumentOutOfRangeException();
             }
-            set 
+            set
             {
                 if (i >= 0 && i < count)
                 {
@@ -139,6 +139,18 @@ namespace CustomListProject
             }
             return printMembers;
         }
-       
+        public static  CustomList<T> operator+ (CustomList<T> list1, CustomList<T> list2)
+        {
+            CustomList<T> newList = new CustomList<T>();
+            foreach (var value in list1)
+            {
+                newList.Add(value);
+            }
+            foreach (var value in list2)
+            {
+                newList.Add(value);
+            }
+            return newList;
+        }
     }
 }
