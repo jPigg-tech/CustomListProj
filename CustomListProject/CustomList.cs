@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CustomListProject
 {
-    public class CustomList<T> : IEnumerator<T>
+    public class CustomList<T> : IEnumerable
     {
         // Variables 
 
@@ -68,8 +69,8 @@ namespace CustomListProject
             _items = new T[capacity];
         }
 
-        // Methods 
-        public IEnumerator<T> GetEnumerator()
+        // Methods       
+        IEnumerator IEnumerable.GetEnumerator()
         {
             for (int i = 0; i < count; i++)
             {
@@ -77,10 +78,6 @@ namespace CustomListProject
             }
         }
 
-        IEnumerator IEnumerable.GetEnumerator()
-        {
-            return GetEnumerator();
-        }
 
         public void Add(T firstItem)
         {
@@ -138,15 +135,16 @@ namespace CustomListProject
                 }
             }
             return printMembers;
-        }
+        }       
+
         public static  CustomList<T> operator+ (CustomList<T> list1, CustomList<T> list2)
         {
             CustomList<T> newList = new CustomList<T>();
-            foreach (var value in list1)
+            foreach (T value in list1)
             {
                 newList.Add(value);
             }
-            foreach (var value in list2)
+            foreach (T value in list2)
             {
                 newList.Add(value);
             }
