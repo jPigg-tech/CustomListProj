@@ -35,7 +35,34 @@ namespace Overloading_OperatorTests
             // Assert
             Assert.AreEqual(expected, actual);
         }
+        [TestMethod]
+        public void CreateTwoListsOfInts_AddTheListsTogether_PreserveOriginalLists()
+        {
+            // Arrange
+            CustomList<int> list1 = new CustomList<int>();
+            CustomList<int> list2 = new CustomList<int>();
 
-           
+            CustomList<int> expected = new CustomList<int>();
+            expected.Add(1);
+            expected.Add(2);
+            expected.Add(3);
+            expected.Add(4);
+
+            CustomList<int> actual = new CustomList<int>();
+
+            // Act
+            list1.Add(1);
+            list1.Add(2);
+
+            list2.Add(3);
+            list2.Add(4);
+
+            actual = list1 + list2;
+
+            // Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+
     }
 }
