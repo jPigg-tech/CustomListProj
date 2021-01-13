@@ -118,10 +118,28 @@ namespace CustomListProject
             }
             return newList;
         }
+        private static CustomList<T> CopyList(CustomList<T> listToCopy)
+        {
+            CustomList<T> CopyList = new CustomList<T>();
+            foreach (T item in listToCopy)
+            {
+                CopyList.Add(item);
+            }
+            return CopyList;
+        }
+        public static CustomList<T> operator -(CustomList<T> listOne, CustomList<T> listTwo)
+        {
+            CustomList<T> listThree = CopyList(listOne);
+
+            foreach (T item in listTwo)
+            {
+                listThree.Remove(item);
+            }
+            return listThree;
+        }
         
         public void Remove(T value)
-        {
-            
+        {            
             // make sure correct value is being removed 
             // make sure the index updates after the item is removed 
             // make sure the count updates when the item is removed 

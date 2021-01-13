@@ -35,7 +35,7 @@ namespace _OperatorTests
             Assert.AreEqual(expected, actual);
         }
         [TestMethod]
-        public void MinusOperator_CompareTwoLists_Remove()
+        public void MinusOperator_CompareTwoLists_RemoveListWithNoValues()
         {
             // Arrange
             CustomList<int> list1 = new CustomList<int>();
