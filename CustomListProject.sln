@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Overloading+OperatorTests",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "-OperatorTests", "-OperatorTests\-OperatorTests.csproj", "{2D829E6B-C2EB-4361-8D97-CE67A5AC479B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZipTestMethods", "ZipTestMethods\ZipTestMethods.csproj", "{6D3C3515-2DDF-4FBB-8A46-E80F02621C3A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{2D829E6B-C2EB-4361-8D97-CE67A5AC479B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2D829E6B-C2EB-4361-8D97-CE67A5AC479B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2D829E6B-C2EB-4361-8D97-CE67A5AC479B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D3C3515-2DDF-4FBB-8A46-E80F02621C3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D3C3515-2DDF-4FBB-8A46-E80F02621C3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D3C3515-2DDF-4FBB-8A46-E80F02621C3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D3C3515-2DDF-4FBB-8A46-E80F02621C3A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
