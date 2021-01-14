@@ -66,24 +66,6 @@ namespace ToStringTests
 
             // Assert
             Assert.AreEqual(expected, actual);
-        }
-
-        // Add an object to a list and return it as a string 
-        [TestMethod]
-        public void AddOneObjectToAList_ReturnItToAString()
-        {
-            // Arrange
-            CustomList<int> testList = new CustomList<int>();
-            string expected = "pizza";
-            string actual;
-            T value1 = pizza;
-
-            // Act
-            testList.Add(value1);
-            actual = testList.ToString();
-
-            // Assert
-            Assert.AreEqual(expected, actual);
-        }
+        }        
     }
 }

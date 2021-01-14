@@ -83,27 +83,28 @@ namespace RemoveTestMethods
         {
             // Arrange
             CustomList<int> testList = new CustomList<int>();
-            int expected = 10;
-            int expected2 = 5;
-            int actual;
-            int actual2;
+            CustomList<int> expected = new CustomList<int>();
+            CustomList<int> actual = new CustomList<int>();
+
             int value1 = 5;
             int value2 = 10;
             int value3 = 20;
             int value4 = 5;
 
             // Act
+            expected.Add(value2);
+            expected.Add(value3);
+            expected.Add(value4);
+
             testList.Add(value1);
             testList.Add(value2);
             testList.Add(value3);
             testList.Add(value4);
             testList.Remove(5);
-            actual = testList[0];
-            actual2 = testList[2];
+            actual = testList;
 
             // Assert
             Assert.AreEqual(expected, actual);
-            Assert.AreEqual(expected2, actual2);
         }
     }
 }
