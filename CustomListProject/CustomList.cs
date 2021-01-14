@@ -137,82 +137,53 @@ namespace CustomListProject
             }
             return listThree;
         }
+        public CustomList<T> Zip(CustomList<T> listOne)
+        {
+            CustomList<T> listTwo = new CustomList<T>();
 
-        //public void Remove(T value)
-        //{
-        //    // make sure correct value is being removed 
-        //    // make sure the index updates after the item is removed 
-        //    // make sure the count updates when the item is removed
-        //    bool itemIsFound = false;
-        //    for (int i = 0; i < count; i++)
-        //    {
-        //        if (_items[i].Equals(value) && i != count - 1)
-        //        {
-        //            _items[i] = _items[i + 1];
-        //            itemIsFound = true;
-        //        }
-        //        else if (_items[i].Equals(value) && i == count - 1)
-        //        {
-        //            _items[i] = _items[i - 1];
-        //            itemIsFound = true;
-        //        }
-        //        else
-        //        {
-        //            throw new ArgumentOutOfRangeException();
-        //        }                
-        //        if(itemIsFound)
-        //        {
-        //            count--;
-        //        }
-        //    }
-        //}
-        //public CustomList<T> Zip(CustomList<T> listOne)
-        //{
-        //    CustomList<T> listTwo = new CustomList<T>();
+            if (count == listOne.Count)
+            {
+                for (int i = 0; i < count; i++)
+                {
+                    listTwo.Add(_items[i]);
+                    listTwo.Add(listOne._items[i]);
+                }
+                return listTwo;
+            }
+            else if (count > listOne.Count)
+            {
+                if (count > 0)
+                {
+                    for (int i = 0; i < listOne.Count; i++)
+                    {
+                        listTwo.Add(_items[i]);
+                        listTwo.Add(listOne._items[i]);
+                    }
+                    return listTwo;
+                }
+                else if (listOne.Count == 0)
+                {
+                    // else throw new ArgumentOutOfRangeException();
+                }
 
-        //    if (count == listOne.Count)
-        //    {
-        //        for (int i = 0; i < count; i++)
-        //        {
-        //            listTwo.Add(_items[i]);
-        //            listTwo.Add(listOne._items[i]);
-        //        }
-        //        return listTwo;
-        //    }
-        //    else if (count > listOne.Count)
-        //    {
-        //        if (listOne.Count > 0)
-        //        {
-        //            for (int i = 0; i < listOne.Count; i++)
-        //            {
-        //                listTwo.Add(_items[i]);
-        //                listTwo.Add(listOne._items[i]);
-        //            }
-        //            return listTwo;
-        //        }
-        //        else if (listOne.Count == 0)
-        //        {
-        //            // else throw new ArgumentOutOfRangeException();
-        //        }
-                
-        //    }
-        //    else if (count < listOne.Count)
-        //    {
-        //        if (Count > 0)
-        //        {
-        //            for (int i = 0; i < count; i++)
-        //            {
-        //                listTwo.Add(_items[i]);
-        //                listTwo.Add(listOne._items[i]);
-        //            }
-        //            return listTwo;
-        //        }
-        //        else if (count == 0)
-        //        {
+            }
+            else if (count < listOne.Count)
+            {
+                if (listOne.count > 0)
+                {
+                    for (int i = 0; i < count; i++)
+                    {
+                        listTwo.Add(_items[i]);
+                        listTwo.Add(listOne._items[i]);
+                    }
+                    return listTwo;
+                }
+                else if (count == 0)
+                {
 
-        //        }
-        //    }
-        //}
+                }
+            }
+        }
         public CustomList<T> Remove(T value)
         {
             CustomList<T> newList = new CustomList<T>();
@@ -256,7 +227,7 @@ namespace CustomListProject
             }
             return index;
         }
-        public static void exchange(int[] data, int m, int n)
+        public static void Exchange(int[] data, int m, int n)
         {
             int temporary;
 
@@ -274,7 +245,7 @@ namespace CustomListProject
                 for (i = 0; i < j; i++)
                 {
                     if (data[i] > data[i + 1])
-                        exchange(data, i, i + 1);
+                        Exchange(data, i, i + 1);
                 }
             }
         }

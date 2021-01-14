@@ -104,7 +104,7 @@ namespace RemoveTestMethods
             actual = testList;
 
             // Assert
-            Assert.AreEqual(expected, actual);
+            Assert.AreEqual(expected.ToString(), actual.ToString());
         }
     }
 }

@@ -1,0 +1,39 @@
+Overloading the minus(-) operator in C#
+
+Removes values that are repeated when 2 or more List<T> 's are compared.
+
+public static CustomList<T> operator -(CustomList<T> listOne, CustomList<T> listTwo)
+
+Pamaeters 
+CustomList<T> listOne & CustomList<T> listTwo
+
+When comparing two or more lists to find and remove the same values, the lists can be null for reference types.
+
+Returns
+Returns a copy of the first list without the value(s) that matched the value(s) in the list being compared to the first list.
+
+Implements
+CustomList<T> listA - CustomList<T> listB
+
+Examples
+
+CustomList<int> list1 = new CustomList<int>();
+        CustomList<int> list2 = new CustomList<int>();
+        // Create 2 new lists 
+
+        list1.Add(7);
+        list1.Add(14);
+        list1.Add(21);
+
+        list2.Add(2);
+        list2.Add(21);
+        list2.Add(17);
+        // populate those lists 
+
+        var outcome = list1 - list2;
+        // Create a variable to caputure those list
+
+
+        Console.WriteLine(outcome);
+        // Result: 7
+        //        14
